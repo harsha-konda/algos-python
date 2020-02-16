@@ -1,7 +1,5 @@
 # https://leetcode.com/problems/largest-rectangle-in-histogram/
 from typing import List
-
-
 class Solution:
     # naive  O(n^3)
     # A simple solution is to one by one consider all bars as starting points and calculate area
