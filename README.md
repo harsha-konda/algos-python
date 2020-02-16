@@ -9,6 +9,12 @@
 list all the different permuations for the problem 
 and eliminate duplicates
 
+## Generalized approach for solving problem
+1. Come up with brute force solution
+2. Think of a simpler version of the problem
+3. Think about problem using simple examples -> try noticing pattern
+4. use some visualization
+
 
 ## Python libraries
 
@@ -30,3 +36,6 @@ heappushpop(h, (3, 'drink'))
 l = [1,2,3]
 heapify(l)
 ```
+
+## To do 
+- sorted matrix problems
