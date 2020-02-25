@@ -39,3 +39,5 @@ heapify(l)
 
 ## To do 
 - sorted matrix problems
+- using while loops 
+- reasoning whether a problem is dp or not
