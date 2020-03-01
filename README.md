@@ -37,7 +37,28 @@ l = [1,2,3]
 heapify(l)
 ```
 
+## queue
+```python
+from queue import Queue
+q =  Queue()
+
+q.put(1)
+q.empty()
+q.get()
+q.not_empty
+```
+
+## iter
+```python
+i = iter([1,2,3])
+next(i)
+next(i)
+next(i)
+```
+
 ## To do 
 - sorted matrix problems
 - using while loops 
 - reasoning whether a problem is dp or not
+- [tree from inorder and postorder](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
+- [tree from preorder and_inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
