@@ -39,17 +39,19 @@ heapify(l)
 
 ## queue
 ```python
-from queue import Queue
-q =  Queue()
+from collections import deque
+q =  deque()
 
-q.put(1)
-q.empty()
-q.get()
-q.not_empty
+q.append('j') 
+q.appendleft('k')
+q.pop()      
+q.popleft()      
 ```
 
 ## iter
 ```python
+from itertools import *
+
 i = iter([1,2,3])
 next(i)
 next(i)
@@ -60,5 +62,7 @@ next(i)
 - sorted matrix problems
 - using while loops 
 - reasoning whether a problem is dp or not
-- [tree from inorder and postorder](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
-- [tree from preorder and_inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+- https://leetcode.com/problems/subarray-sum-equals-k/
+- [coin-change-2](https://leetcode.com/problems/coin-change-2/)
+- [critical-connections-in-network](https://leetcode.com/problems/critical-connections-in-a-network/ )
+    -  why do you need to intialize `newRank =  rank`

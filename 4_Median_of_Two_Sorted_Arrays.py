@@ -3,35 +3,56 @@ from typing import List
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
 
-        is_odd = (len(nums1) + len(nums2)) % 2
 
-        def search(start1, end1, start2, end2):
 
-            mid1 = (start1 + end1) // 2
-            mid2 = (start2 + end2) // 2
+        is_odd  = (len(nums1)+len(nums2))%2
 
-            def left_ele(mid1, mid2):
-                return max(nums1[mid1], nums2[mid2])
-
-            def right_ele(mid1, mid2):
-                return min(nums1[mid1 + 1], nums2[mid2 + 1])
-
-            if (nums1[mid1] > nums2[mid2 + 1]):
-                return search(start1, mid1, start2, end2)
-            elif (nums2[mid2] > nums1[mid1 + 1]):
-                return search(start1, end1, start2, mid2)
+        def cal_median(arr):
+            if is_odd:
+                return arr[len(arr)//2]
             else:
-                total_left_digits = mid1 + 1 + mid2 + 2
-                total_right_digits = (len(nums1) - 1) - mid1 + (len(nums2) - 1) - mid2
-                print(is_odd, total_left_digits, total_right_digits)
-                if (not is_odd and total_left_digits == total_right_digits):
-                    print("going")
-                    return (left_ele(mid1, mid2) + right_ele(mid1, mid2)) / 2.0
+                return (arr[len(arr)//2-1]+arr[len(arr)//2])/2
 
-                if (is_odd):
-                    if (total_left_digits + 1 == total_right_digits):
-                        return left_ele(mid1, mid2)
-                    elif (total_left_digits == total_right_digits + 1):
-                        return right_ele(mid1, mid2)
+        def binarySearch(i_start,i_end):
+            i = (i_start+i_end)//2
+            j = (len(nums1)+len(nums2)+1)//2 -i
 
-        return search(0, len(nums1) - 1, 0, len(nums2) - 1)
+            if not nums1:
+                return cal_median(nums2)
+
+            if not nums2:
+                return cal_median(nums1)
+
+            nums1_l,nums1_r = float('-inf'),float('inf')
+            nums2_l,nums2_r = float('-inf'),float('inf')
+
+            if i>0:
+                nums1_l = nums1[i-1]
+
+            if j>0:
+                nums2_l = nums2[j-1]
+
+            if i<len(nums1):
+                nums1_r = nums1[i]
+
+            if j<len(nums2):
+                nums2_r = nums2[j]
+
+            if nums1_l <= nums2_r and nums2_l <=nums1_r:
+                if is_odd:
+                    return max(nums1_l,nums2_l)
+                else:
+                    return (max(nums1_l,nums2_l)+min(nums1_r,nums2_r))/2
+
+            if nums1_l>nums2_r:
+                return binarySearch(i_start,i-1)
+            else:
+                return binarySearch(i+1,i_end)
+        return binarySearch(0,len(nums1))
+
+sol = Solution()
+assert (sol.findMedianSortedArrays([1, 3],[2])==2.0)
+assert (sol.findMedianSortedArrays([1, 2],[3,4])==2.5)
+assert (sol.findMedianSortedArrays([1, 2,3,4,5],[3])==3.0)
+assert (sol.findMedianSortedArrays([1, 2,3,4,5],[3])==3.0)
+assert (sol.findMedianSortedArrays([1, 2,3,4,5],[])==3.0)

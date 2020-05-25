@@ -17,7 +17,6 @@ class Solution:
                 if end-start > d:
                     head = start
                     d = end-start
-                print(start,end)
                 if(s[start] in freqMap):
 
                     freqMap[s[start]] -=1
