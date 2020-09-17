@@ -17,7 +17,7 @@ def getShortenedStrings(rawString,charLimit = 100):
     while(i<len(rawString)):
         curStr = "" + word
 
-        while(len(curStr) < charLimit and i< len(rawString)):
+        while(len(curStr) < limit and i< len(rawString)):
             start =  i
             if rawString[i] == ' ':
                 while( i < len(rawString) and
