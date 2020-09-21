@@ -1,3 +1,4 @@
+# https://www.glassdoor.com/Interview/There-is-only-one-coding-problem-given-100min-The-problem-is-as-below-A-group-of-farmers-has-some-elevation-data-an-QTN_429387.htm
 def labelTopology(elevationList):
 	height,elevations = elevationList[0],elevationList[1:]
 
@@ -9,17 +10,14 @@ def labelTopology(elevationList):
 		elevationList[i][j] = elevations[k]
 
 	store = {}
-
 	for i in range(height):
 		for j in range(height):
 			store[(i,j)] = (i,j)
-
 
 	def union(node,parent):
 		parent1 = find(node) 
 		parent2 = find(parent)
 		store[parent1] = parent2
-
 
 	def find(node):
 		if store[node] == node:
@@ -46,8 +44,6 @@ def labelTopology(elevationList):
 			minNode = indexOfMin((i,j))
 			union((i,j),minNode)
 	
-
-
 	for i in range(height):
 		print([find((i,j)) for j in range(height)])
 
