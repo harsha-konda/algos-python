@@ -2,7 +2,7 @@
 # uber
 
 def countPairs(arr):
-    arr = sorted(arr,reverse = True)
+	arr = sorted(arr,reverse = True)
 	dic = {}
 	for ele in arr:
 		if ele not in dic:
