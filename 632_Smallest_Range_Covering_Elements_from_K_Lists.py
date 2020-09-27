@@ -29,3 +29,4 @@ class Solution:
                 return result
             maxima  = max(maxima,nums[i][j+1])
             heappush(minHeap,(nums[i][j+1],i,j+1))
+
