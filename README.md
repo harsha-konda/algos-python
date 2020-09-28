@@ -58,6 +58,16 @@ next(i)
 next(i)
 ```
 
+## Dynamic Programming
+- Divide and Conquer
+  - Break
+  - Merge
+  - Base Case
+- DP in some cases is an optmization to the Divide and Conquer Subproblems. Usually, it reduces the O(x^y) to polynomial time
+- Types of DP Problems:
+  - Optimization problem: find the maximum, minimum of a problem space
+  - Counting Problems: Number of permutations
+
 ## To do 
 - sorted matrix problems
 - using while loops 
