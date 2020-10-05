@@ -18,7 +18,6 @@ class Solution:
 				
 				if count == prevCount:
 					maxCount = max(i-stack[-1][0],maxCount)
-
 			else: 
 				stack = [(i,0)]
 
