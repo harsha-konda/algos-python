@@ -76,3 +76,5 @@ next(i)
 - [coin-change-2](https://leetcode.com/problems/coin-change-2/)
 - [critical-connections-in-network](https://leetcode.com/problems/critical-connections-in-a-network/ )
     -  why do you need to intialize `newRank =  rank`
+- https://leetcode.com/problems/sum-of-subarray-minimums/
+- https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/
