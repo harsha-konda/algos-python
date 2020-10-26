@@ -78,3 +78,4 @@ next(i)
     -  why do you need to intialize `newRank =  rank`
 - https://leetcode.com/problems/sum-of-subarray-minimums/
 - https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/
+- https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU
