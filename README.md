@@ -85,3 +85,4 @@ next(i)
 - get,set,delete,undo,redo
 - gain,deadline -> schedule them to optimize for profit
 - insert,delete,getRandom,getLast,get
+- consistent hashing implementation
