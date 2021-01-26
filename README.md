@@ -86,3 +86,7 @@ next(i)
 - gain,deadline -> schedule them to optimize for profit
 - insert,delete,getRandom,getLast,get
 - consistent hashing implementation
+
+
+## Advice
+- https://leetcode.com/discuss/interview-experience/906579/Staff-Eng-or-FacebookAirbnbPinterestSquareStripeByteDance-or-San-Francisco-or-Sept-2020-or-Offers
